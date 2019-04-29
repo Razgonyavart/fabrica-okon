@@ -1,0 +1,106 @@
+/*theme-color*/
+$orange: #F26422;
+$black: #3C3C3B;
+$grey: #A5A5A5;
+$white: #FFFFFF;
+
+/*export em*/
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+/*main*/
+@import 'scss/fonts.scss';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 33%;
+  margin: auto;
+  font-family: Core Sans NR;
+}
+h1, h2 {
+  font-size: 2vw;
+}
+p {
+  font-size: 1.55vw;
+}
+
+button {
+  width: 78%;
+  height: 5vw;
+  background: $orange;
+  border-radius: 0.5vw;
+  margin: 3vw 3.65vw;
+  font-size: 1.8vw;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $white;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  transition: 0.1s;
+  &:hover {
+    transition: 0.1s;
+    background: #ff7f49;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.72vw;
+  line-height: 23px;
+  text-align: right;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: $orange;
+  cursor: pointer;
+  padding-left: 7vw;
+  transition: 0.2s;
+  &:hover {
+    text-decoration-line: none;
+    transition: 0.2s;
+  }
+}
+.wrapper {
+  width: 33%;
+  height: 177vw;
+  position:  absolute;
+  background: url('img/bg-clouds.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .container {
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255, 0);
+  }
+}
+.greyFont {
+  font-size: 1.4vw;
+  line-height: 1vw;
+  color: $grey;
+}
+.orangeFont {
+  color: $orange;
+}
+
+/*header*/
+@import "scss/header.scss";
+
+/*content*/
+@import "scss/content.scss";
+
+/*footer*/
+@import "scss/footer.scss";
+
+/*modal*/
+@import 'scss/popup.scss';
+
+/*adaptive*/
+@import "scss/adaptive.scss";

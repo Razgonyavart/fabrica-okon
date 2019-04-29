@@ -1,0 +1,15 @@
+{
+  "name": "fo",
+ "version": "1.0.0",
+ "description": "TestTask",
+ "main": "index.js",
+ "dependencies": {
+   "gulp": "^4.0.1"
+ },
+ "devDependencies": {},
+ "scripts": {
+   "test": "echo \"Error: no test specified\" && exit 1"
+ },
+ "author": "Razgonyaev Artem",
+ "license": "ISC"
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Фабрика окон</title>
+    <link rel="stylesheet" href="main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container" id="container">
+
+      <!--header-->
+        <section class="header" id="header">
+        <h1 id="h1">Стеклопакет <span class="orangeFont">нового</span> поколения!</h1>
+        <div class="line" id="line"></div>
+        <div class="line large" id="large"></div>
+        <img src="img/glass-looong.png" alt="">
+        <div class="round" onclick="popupOpenUp()"><div></div></div> <!--popup button-->
+        <div class="round second" onclick="popupOpenDown()"><div></div></div> <!--popup button-->
+      </section>
+      <!--/header-->
+
+      <!--content-->
+      <section class="content" id="content">
+        <h2>Термопакет™ 4.0 LGC</h2>
+          <ul> <!--skills-->
+            <li>
+            <img src='img/icon/Group-17.1.svg' alt="" />
+              <p>Максимальная светопрозрачность <br/><span class="greyFont"> В комнате будет <span class="orangeFont">много света</span></span></p>
+            </li>
+            <li>
+              <img src='img/icon/Group-14.1.svg' alt="" />
+              <p>Отлично удерживает тепло зимой <br/> <span class="greyFont"><span class="orangeFont">На 102% лучше</span> обычного стеклопакета</span></p>
+            </li>
+            <li>
+              <img src='img/icon/Group-15.1.svg' alt="" />
+              <p>Защищает от ультрафиолета и солнечного жара <br/> <span class="greyFont"><span class="orangeFont">На 61% лучше</span> обычного стеклопакета</span></p>
+            </li>
+            <li>
+              <img src='img/icon/Group-16.1.svg' alt="" />
+              <p>Экономия на отоплении и охлаждении <br/> <span class="greyFont"><span class="orangeFont">Не нужно</span> включать обогреватель и кондиционер</span></p>
+            </li>
+          </ul>
+          <button type="button" name="button">Термопакет™ в подарок</button>
+          <a href="#">Подробнее о новинке</a>
+      </section>
+      <!--/content-->
+
+      <!--footer-->
+      <section class="footer" id="footer">
+        <p>В улучшеный стеклопакет мы установили со стороны помещения стекло с энергосберегающим покрытием.
+        Оно обладает высокой светопропускающей способностью и прозрачностью и в то же время обеспечивает высокую теплоизоляцию.<br/>
+        <br/>
+        Со стороны улицы в этом стеклопакете установлено мультифункциональное стекло с покрытием по технологии
+        Double Silver™ — это покрытие не видно глазу, но оно содержит 15 слоёв.
+        В состав напыления входят просветляющие и закрепляющие слои из различных металлов,
+        включая два слоя из серебра. <br/>
+        <br/>
+        В результате мы получили практически универсальный стеклопакет с выдающимися характеристиками!</p>
+        <img src="img/clouds_bottom[1].png" alt="">
+      </section>
+      <!--/footer-->
+
+      </div>
+    </div>
+
+    <!--popup-->
+    <!--Frist popup -->
+    <div class="popup"  id="popupUp">
+      <div class="close" onclick="popupCloseUp()"> <!--close popup-->
+        <div class="plus" onclick="popupCloseUp()"></div>
+      </div>
+      <h2>Комбинация стёкол</h2>
+      <p><span class="greyFont">Со стороны улицы </span><br/>Мультифункциональное стекло с покрытием по технологии Double Silver™. <br/>
+      <br/>
+      <span class="greyFont">Со стороны помещения </span><br/> Стекло с энергосберегающим покрытием (i-стекло).</p>
+    </div>
+    <!--/Frist popup -->
+    <!--Second popup -->
+    <div class="popup down"  id="popupDown">
+      <div class="close" onclick="popupCloseDown()"> <!--close popup-->
+        <div class="plus"></div>
+      </div>
+      <h2>2 камеры с дистанционными рамками</h2>
+      <p>Дистанционная рамка — часть каркаса стеклопакета, разделяющая стёкла на расстояние,
+      полученное из расчётов для максимальной эффективности. Рамки служат первичным каркасом для стеклопакета,
+      обеспечивая параллельность листов стекла по всей плоскости и защищают окно от появления конденсата,
+      благодаря специальным осушителям.</p>
+    </div>
+    <!--/Second popup -->
+    <!--/popup-->
+
+    <script type="text/javascript">
+      function popupOpenUp(){
+        popupUp.style.display ="block";
+        header.style.background ="rgba(255,255,255, 0.8)";
+        content.style.opacity = "0.2";
+        footer.style.opacity = "0.2";
+        container.style.background ="rgba(255,255,255, 0.8)";
+        line.style.display = "block";
+        h1.style.opacity = "0.2";
+      }
+      function popupCloseUp(){
+        popupUp.style.display = "none";
+        header.style.background ="rgba(255,255,255, 0)";
+        content.style.opacity = "1";
+        footer.style.opacity = "1";
+        container.style.background ="rgba(255,255,255, 0)";
+        line.style.display = "none";
+        h1.style.opacity = "1";
+      }
+      function popupOpenDown(){
+        popupDown.style.display = "block";
+        header.style.background ="rgba(255,255,255, 0.8)";
+        content.style.opacity = "0.2";
+        footer.style.opacity = "0.2";
+        container.style.background ="rgba(255,255,255, 0.8)";
+        large.style.display = "block";
+        h1.style.opacity = "0.2";
+      }
+      function popupCloseDown(){
+        popupDown.style.display = "none";
+        header.style.background ="rgba(255,255,255, 0.5)";
+        content.style.opacity = "1";
+        footer.style.opacity = "1";
+        container.style.background ="rgba(255,255,255, 0)";
+        large.style.display = "none";
+        h1.style.opacity = "1";
+      }
+    </script>
+  </body>
+</html>

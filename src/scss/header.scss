@@ -1,0 +1,53 @@
+/*theme-color*/
+$orange: #F26422;
+$black: #3C3C3B;
+$grey: #A5A5A5;
+$white: #FFFFFF;
+
+.header {
+  width: 100%;
+  height: 45vw;
+  background: rgba(255,255,255, 0);
+  overflow: hidden;
+  h1 {
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $black;
+    padding: 5vw 5vw 2vw 5vw;
+  }
+  img {
+    margin-left: 9vw;
+    height: 80vw;
+  }
+  .line {
+    display: none;
+    width: 0.4vw;
+    height: 20vw;
+    position: absolute;
+    margin: 10.7vw 10.4vw;
+    background: $orange;
+    &:before {
+      content: ' ';
+      width: 0.4vw;
+      height: 20vw;
+      position: absolute;
+      left: 1.6vw;
+      background: $orange;
+    }
+  }
+  .large {
+    width: 1.3vw;
+    margin: 10.7vw 10.5vw;
+    display: none;
+    border-radius: 0vw;
+    background: rgba(242, 100, 34, 0.5);
+    &:before {
+      content: ' ';
+      width: 1.3vw;
+      position: absolute;
+      left: 1.75vw;
+      background: rgba(242, 100, 34, 0.5);
+    }
+  }
+}
